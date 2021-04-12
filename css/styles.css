@@ -40,7 +40,7 @@ li {
     display: inline-flex;
     margin: auto 40px;
 }
-button{
+.header-button{
     width: 160px;
     height: 40px;
     background: #FFFFFF 0% 0%;
@@ -54,46 +54,78 @@ button{
 /* ASIDE STYLES */
 aside, #aside-row-1, #aside-row-2 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-flow: row wrap;
-    text-align: center;
 }
 #aside-row-1{
     flex-direction: row;
-    justify-content: center;
-    padding: 30px 50px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 10px;
 }
 article, form {
     width: 50%;
-    height: auto;
     padding: 10px;
+}
+h2, p {
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 h2  {
     font-size: 20px;
 }
 p {
     font-size: 12px;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 form{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.row-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.row-form, label, input{
+    width: 340px;
+}
+#masculino, #feminino {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+.row-form-radio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    width: 340px;
 }
 label {
     font-size: 12px;
     color: #888888;
-    padding-top: 20px;
-    padding-bottom: 10px;
     text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 input {
-    width: 340px;
     height: 30px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background: #FFFFFF;
     border: 1px solid #707070;
     opacity: 1;
 }
-span{
-    display: inline-flex;
+button {
+    width: 340px;
+    height: 39px;
+    background: #FFFFFF;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+    font-size: 16px;
 }

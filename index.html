@@ -20,16 +20,16 @@
             <p>Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
             <ul>
                 <li>
-                    <button>Conheça a Linx</button>
+                    <button class="header-button">Conheça a Linx</button>
                 </li>
                 <li>
-                    <button>Ajude o algorítimo</button>
+                    <button class="header-button">Ajude o algorítimo</button>
                 </li>
                 <li>
-                    <button>Seus produtos</button>
+                    <button class="header-button">Seus produtos</button>
                 </li>
                 <li>
-                    <button>Compartilhe</button>
+                    <button class="header-button">Compartilhe</button>
                 </li>
             </ul>
         </section>
@@ -39,29 +39,45 @@
             <article>
                 <h2>Ajude o algorítimo a ser mais certeiro</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend. 
-                    <br/>
-                    <br/>
-                    Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta
+                    convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper
+                    pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut
+                    tellus vulputate tincidunt. Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu
+                    ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. Vivamus
+                    et arcu non felis tristique eleifend.
+                    <br />
+                    <br />
+                    Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis
+                    lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque
+                    ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean
+                    sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis
+                    augue est vel metus.
                 </p>
             </article>
             <form>
-                <label for="name"> Seu nome: </label>
-                <input id="name"  type="text"/>
+                <div class="row-form">
+                    <label for="name"> Seu nome: </label>
+                    <input id="name" type="text" />
+                </div>
 
-                <label for="email"> E-mail: </label>
-                <input id="email" type="email"/>
+                <div class="row-form">
+                    <label for="email"> E-mail: </label>
+                    <input id="email" type="email" />
+                </div>
 
-                <label for="cpf"> CPF </label>
-                <input id="cpf" type="number"/>
-                
-                <span>
+                <div class="row-form">
+                    <label for="cpf"> CPF: </label>
+                    <input id="cpf" type="number" />
+                </div>
+
+                <div class="row-form-radio">
                     <input id="masculino" type="radio" />
                     <label for="masculino"> Masculino </label>
 
                     <input id="feminino" type="radio" />
                     <label for="feminino"> Feminino </label>
-                </span>
+                </div>
+                <button>Enviar</button>
             </form>
         </section>
         <section id="aside-row-2">
