@@ -60,7 +60,6 @@ aside, #aside-row-1, #aside-row-2 {
 }
 #aside-row-1{
     flex-direction: row;
-    align-items: center;
     justify-content: center;
     padding: 30px 50px;
 }
@@ -69,16 +68,32 @@ article, form {
     height: auto;
     padding: 10px;
 }
-article, h2  {
+h2  {
     font-size: 20px;
 }
-article, p {
+p {
     font-size: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-form, label {
-    text-align: left;
+form{
+    display: flex;
+    flex-direction: column;
+}
+label {
     font-size: 12px;
     color: #888888;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+input {
+    width: 340px;
+    height: 30px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+}
+span{
+    display: inline-flex;
 }
