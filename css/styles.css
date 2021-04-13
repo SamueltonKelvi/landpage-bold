@@ -1,6 +1,6 @@
 
 /* GLOBAL FLEX */
-header, #header-background, aside, #aside-row-1, #aside-row-2, #aside-article, #aside-article-2 {
+header, footer, #header-background, aside, #aside-row-1, #aside-row-2, #aside-row-3, #aside-article, #aside-article-2 {
     display: flex;
 }
 
@@ -215,17 +215,45 @@ img {
     color: #888888;
 }
 
-#aside-article-2 {
+#aside-row-3 {
+    flex-direction: column;
     margin-top: 50px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
-#aside-article-2 > p {
+#aside-row-3 > p {
     color: #888888;
     text-align: center;
     font-size: 14px;
 }
-#aside-article-2 > form {
+#aside-row-3 > form, #aside-row-3 > div {
     display: flex;
     flex-direction: row;
-    padding: 10px;
-    background-color: aqua;
+}
+#aside-form-2 {
+    width: 100%;
+}
+#aside-form-2 > div {
+    margin: auto 10px;
+    flex-direction: column;
+}
+#aside-row-3 > button {
+    margin: 40px auto;
+    width: 260px;
+    color: #888888;
+}
+
+/* FOOTER STYLE */
+footer{
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: #707070;
+    border: 1px solid #707070;
+}
+footer > p {
+    color: #FFFFFF;
+    font-size: 12px;
+    text-align: center;
 }
