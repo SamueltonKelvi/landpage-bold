@@ -3,17 +3,14 @@ const URL_API = "https://frontend-intern-challenge-api.iurykrieger.vercel.app/pr
 
 const products = [];
 
-// Connect API Service
-// function Connect(){
+function Connect() {
 
-//     let request = new XMLHttpRequest();
-//     request.open('GET', URL_API);
-//     request.responseType = 'json';
-//     request.send();
+    let request = new XMLHttpRequest();
+    request.open("GET", URL_API, false);
+    request.send();
 
-//     request.onload = function() {
-//         let data = request.response;
-//         products.push(data);
-//     }
+    return request.responseText;
+}
 
-// }
+// console.log(Connect());
+
