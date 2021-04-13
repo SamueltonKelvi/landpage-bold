@@ -15,6 +15,7 @@ const data = Connect();
 products.push(data);
 
 let list = document.getElementById('#list-products');
+
 let valueBefore = document.getElementById('#value-before');
 let valueNow = document.getElementById('#value-now');
 let valueOr = document.getElementById('#value-or');
@@ -24,3 +25,14 @@ products.map((item, index) => {
     newItem.innerHTML = index;
     newItem.innerHTML = item.name;
 });
+
+const nameForm1 = document.getElementsByName('name').value;
+const emailForm1 = document.getElementsByName('email').value;
+const cpfForm1 = document.getElementsByName('cpf').value;
+const mascForm1 = document.getElementsByName('masc').value;
+const femForm1 = document.getElementsByName('fem').value;
+
+const formRow1Action = (e) => {
+    e.preventDefault();
+    alert('ok')
+}

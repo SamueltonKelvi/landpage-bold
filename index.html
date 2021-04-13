@@ -49,27 +49,27 @@
             <form>
                 <div class="row-form">
                     <label for="name"> Seu nome: </label>
-                    <input id="name" type="text" />
+                    <input id="name" type="text" name="name" required/>
                 </div>
 
                 <div class="row-form">
                     <label for="email"> E-mail: </label>
-                    <input id="email" type="email" />
+                    <input id="email" type="email" name="email" required/>
                 </div>
 
                 <div class="row-form">
                     <label for="cpf"> CPF: </label>
-                    <input id="cpf" type="number" />
+                    <input id="cpf" type="number" name="cpf" required/>
                 </div>
 
                 <div class="row-form-radio">
-                    <input id="masculino" type="radio" />
-                    <label for="masculino"> Masculino </label>
+                    <input id="masc" type="radio" name="masc" checked/>
+                    <label for="masc"> Masculino </label>
 
-                    <input id="feminino" type="radio" />
-                    <label for="feminino"> Feminino </label>
+                    <input id="fem" type="radio" name="fem" />
+                    <label for="fem"> Feminino </label>
                 </div>
-                <button>Enviar</button>
+                <button onclick="formRow1Action()">Enviar</button>
             </form>
         </section>
         <article id="aside-article">
