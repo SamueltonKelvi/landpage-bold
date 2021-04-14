@@ -161,7 +161,8 @@ hr {
 }
 ul{
     list-style: none;
-    display: inline-flex;
+    display: grid;
+    grid-auto-flow: column;
     flex-grow: 4;
 }
 figure{
@@ -176,19 +177,26 @@ img {
 #article-list{
     width: 100%;
     height: auto;
+    text-align: left;
 }
 #article-list > h2 {
     font-size: 14px;
     color: #888888;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 #article-list > p, span {
     font-size: 12px;
     color: #888888;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 #article-list > h1 {
     font-size: 16px;
     color: #888888;
     font-weight: bold;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 #aside-button {
     font-size: 16px;
