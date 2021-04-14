@@ -49,21 +49,21 @@
             <form method="POST">
                 <div class="row-form">
                     <label for="name"> Seu nome: </label>
-                    <input id="name" type="text" name="name" required/>
+                    <input id="name" type="text" name="name" required />
                 </div>
 
                 <div class="row-form">
                     <label for="email"> E-mail: </label>
-                    <input id="email" type="email" name="email" required/>
+                    <input id="email" type="email" name="email" required />
                 </div>
 
                 <div class="row-form">
                     <label for="cpf"> CPF: </label>
-                    <input id="cpf" type="number" name="cpf" required/>
+                    <input id="cpf" type="number" name="cpf" required />
                 </div>
 
                 <div class="row-form-radio">
-                    <input id="masc" type="radio" name="masc" checked/>
+                    <input id="masc" type="radio" name="masc" checked />
                     <label for="masc"> Masculino </label>
 
                     <input id="fem" type="radio" name="fem" />
@@ -108,19 +108,19 @@
         </article>
         <section id="aside-row-3">
             <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
-            <form id="aside-form-2">
-                <div>
-                    <label for="brother">Nome do seu amigo:</label>
-                    <br />
-                    <input id="brother" type="text" />
+            <form id="aside-form-2" method="POST">
+                <div id="aside-form-2-container">
+                    <div id="aside-form-2-inputs">
+                        <label for="brother">Nome do seu amigo:</label>
+                        <input id="brother" type="text" name="brother" required />
+                    </div>
+                    <div id="aside-form-2-inputs">
+                        <label for="email2">E-mail:</label>
+                        <input id="email2" type="email" name="email" required />
+                    </div>
                 </div>
-                <div>
-                    <label for="email">E-mail:</label>
-                    <br />
-                    <input id="email" type="email" />
-                </div>
+                <button id="button-form-2" onclick="formRow2Action()">Enviar agora</button>
             </form>
-            <button id="button-form-3">Enviar agora</button>
         </section>
     </aside>
     <footer>

@@ -24,8 +24,12 @@ function formRow1Action() {
     
     let mascForm1 = document.getElementById('masc').checked;
     let femForm1 = document.getElementById('fem').checked;
-    
-    alert(`Seus dados: ${nameForm1}, ${emailForm1}, ${cpfForm1}`);
+
+    if(nameForm1 === '' || emailForm1 === '' || cpfForm1 === ''){
+        return alert(`Preencha todos os campos`);
+    } else {
+        alert(`Seus dados: ${nameForm1}, ${emailForm1}, ${cpfForm1}`);
+    }
     
     nameForm1 = '';
     emailForm1 = '';
@@ -41,3 +45,22 @@ let newList = document.createElement('li');
 let valueBefore = document.getElementById('value-before');
 let valueNow = document.getElementById('value-now');
 let valueOr = document.getElementById('value-or');
+
+
+/* Função formulário 02 */
+
+function formRow2Action(){
+
+    let nameForm2 = document.getElementById('brother').value;
+    let emailForm2 = document.getElementById('email2').value;
+
+    if(nameForm2 === '' || emailForm2 === ''){
+        return alert(`Dados inválidos`);
+    } else {
+        alert(`Dados preenchidos: ${nameForm2}, ${emailForm2}`);
+    }
+
+    nameForm2 = '';
+    emailForm2 = '';
+
+}

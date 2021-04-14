@@ -215,6 +215,9 @@ img {
     color: #888888;
 }
 
+#aside-row-3, #aside-form-2-inputs, #aside-form-2, #aside-form-2-container {
+    display: flex;
+}
 #aside-row-3 {
     flex-direction: column;
     margin-top: 50px;
@@ -227,20 +230,21 @@ img {
     text-align: center;
     font-size: 14px;
 }
-#aside-row-3 > form, #aside-row-3 > div {
-    display: flex;
-    flex-direction: row;
-}
 #aside-form-2 {
     width: 100%;
+    flex-direction: column;
 }
-#aside-form-2 > div {
+#aside-form-2-container {
+    flex-direction: row;
+}
+#aside-form-2-inputs {
     margin: auto 10px;
     flex-direction: column;
 }
-#aside-row-3 > button {
-    margin: 40px auto;
+#button-form-2 {
     width: 260px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     color: #888888;
 }
 
