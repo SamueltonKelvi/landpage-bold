@@ -1,17 +1,27 @@
 /* Conexão com API */
-const URL_API = "https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1";
+const URL_PAGE1 = "https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1";
+const URL_PAGE2 = "https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=2";
+const NEXT_PAGE = false;
 const products = [];
 
 function Connect() {
 
     try {
         let request = new XMLHttpRequest();
-        request.open("GET", URL_API, false);
-        request.send();
 
-        let data = JSON.parse(request.responseText);
+        if(NEXT_PAGE){
+            request.open("GET", URL_PAGE2, false);
+            request.send();
 
-        products.push(data);
+            let data2 = JSON.parse(request.responseText);
+            products.push(data2);
+        } else {
+            request.open("GET", URL_PAGE1, false);
+            request.send();
+
+            let data1 = JSON.parse(request.responseText);
+            products.push(data1);
+        }
 
     } catch (error) {
         products.push([]);
@@ -22,6 +32,7 @@ function Connect() {
 
 const data = Connect();
 products.push(data);
+// console.log(products[0].products[0].name);
 
 /* getElementById => function */
 function getId(id) {
@@ -50,49 +61,52 @@ function formRow1Action() {
 }
 
 /* Importando id's da lista de produtos */
-let listUl = getId('list-products');
-let newLi = document.createElement('li');
-
-function nextPageList(){
-
-}
-
 if (products.length === 0) {
     listUl.innerHTML = newLi = '<p>Nenhuma lista</p>';
 } else {
 
+    let listContainer = getId('list-products');
+    let li = document.createElement('li');
+
     for(let index = 0; index < products.length; index++){
 
-        products.map((item, index) => {
-            newLi.innerHTML = `
-                <div key="${index}" id="aside-div">
-                    <figure>
-                        <img id="img"
-                            src="${item.products[index].image}" />
-                    </figure>
-                    <article id="article-list">
-                        <h2 id="name-item">${item.products[index].name}</h2>
-                            <p id="text-item">
-                                Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se
-                                trata.
-                            </p>
-                            <span id="value-before">De: R$ ${item.products[index].oldPrice}</span>
-                            <h1 id="value-now">Por: R$ ${item.products[index].price}</h1>
-                            <span id="value-or">ou 2x de R$ 21,00</span>
-                    </article>
-                    <button id="aside-button">Comprar</button>
-                </div>
-            `
+        let index = 0;
 
-            listUl.appendChild(newLi);
-        });
+        let imageProducts = products[index].products[index].image;
+        let nameProducts = products[index].products[index].name;
+        let descriptionProducts = products[index].products[index].description;
+        let oldPriceProducts = products[index].products[index].oldPrice;
+        let priceProducts = products[index].products[index].price;
+
+        li.innerHTML = `
+            <div id="aside-div">
+                <figure>
+                    <img id="img-item" src="${imageProducts}" />
+                </figure>
+                <article id="article-list">
+                    <h2 id="name-item">${nameProducts}</h2>
+                    <p id="text-item">${descriptionProducts}</p>
+                    <span id="value-before">De: R$ ${oldPriceProducts}</span>
+                    <h1 id="value-now">Por: R$ ${priceProducts}</h1>
+                    <span id="value-or">ou 2x de R$ 21,00</span>
+                </article>
+                <button id="aside-button">Comprar</button>
+            </div>
+        `;
+
+        listContainer.appendChild(li);
 
     }
 
 }
 
-/* Função formulário 02 */
+function nextPageList() {
+    return NEXT_PAGE = true;
+}
 
+console.log(products[0].nextPage);
+
+/* Função formulário 02 */
 function formRow2Action() {
 
     let nameForm2 = getId('brother').value;

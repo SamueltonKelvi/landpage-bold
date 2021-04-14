@@ -1,6 +1,6 @@
 
 /* GLOBAL FLEX */
-header, footer, aside, #aside-row-1, #aside-row-2, #aside-row-3, #aside-article, #aside-article-2 {
+header, footer, aside, #aside-row-1, #list-products, #aside-row-2, #aside-row-3, #aside-article, #aside-article-2 {
     display: flex;
 }
 
@@ -159,11 +159,12 @@ hr {
     width: 300px;
     height: 500px;
 }
-ul{
-    list-style: none;
-    display: grid;
-    grid-auto-flow: column;
+#list-products{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     flex-grow: 4;
+    list-style: none;
 }
 figure{
     width: auto;
