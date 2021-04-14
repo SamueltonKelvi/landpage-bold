@@ -1,8 +1,6 @@
 
 const URL_API = "https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1";
 
-const products = [];
-
 function Connect() {
     let request = new XMLHttpRequest();
     request.open("GET", URL_API, false);
@@ -11,28 +9,35 @@ function Connect() {
     return JSON.parse(request.responseText);
 }
 
+const products = [];
 const data = Connect();
 products.push(data);
 
+
+/* Função formulário 01 */
+
+function formRow1Action() {
+    
+    let nameForm1 = document.getElementById('name').value;
+    let emailForm1 = document.getElementById('email').value;
+    let cpfForm1 = document.getElementById('cpf').value;
+    
+    let mascForm1 = document.getElementById('masc').checked;
+    let femForm1 = document.getElementById('fem').checked;
+    
+    alert(`Seus dados: ${nameForm1}, ${emailForm1}, ${cpfForm1}`);
+    
+    nameForm1 = '';
+    emailForm1 = '';
+    cpfForm1 = '';
+}
+
+
+/* Importando id's da lista de produtos */
+
 let list = document.getElementById('#list-products');
 
-let valueBefore = document.getElementById('#value-before');
-let valueNow = document.getElementById('#value-now');
-let valueOr = document.getElementById('#value-or');
-let newItem = document.createElement('li');
-
-products.map((item, index) => {
-    newItem.innerHTML = index;
-    newItem.innerHTML = item.name;
-});
-
-const nameForm1 = document.getElementsByName('name').value;
-const emailForm1 = document.getElementsByName('email').value;
-const cpfForm1 = document.getElementsByName('cpf').value;
-const mascForm1 = document.getElementsByName('masc').value;
-const femForm1 = document.getElementsByName('fem').value;
-
-const formRow1Action = (e) => {
-    e.preventDefault();
-    alert('ok')
-}
+let newList = document.createElement('li');
+let valueBefore = document.getElementById('value-before');
+let valueNow = document.getElementById('value-now');
+let valueOr = document.getElementById('value-or');
